@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HomePage{% endblock %}
+
+{% block body %}
+<style>
+    body {background-color: #f0f0f0; margin: 0; padding: 0;}
+    .wrapper {margin: 10px ; width: 100%; font: 1em sans-serif;}
+</style>
+
+<nav>
+ <h1>NavBar</h1>
+</nav>
+<br>
+
+<div class="wrapper">
+    <h1>Hello</h1>
+
+ 
+</div>
+
+ {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_login') }}">Logout</a>
+        </div>
+    {% endif %}
+{% endblock %}
