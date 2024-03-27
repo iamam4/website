@@ -18,6 +18,7 @@ class HomeController extends AbstractController
         } else {
             // if not logged in, $usernames will be null
             $usernames = null;
+            return $this->redirectToRoute('app_login');
         }
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
